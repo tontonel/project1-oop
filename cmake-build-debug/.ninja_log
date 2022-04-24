@@ -1,0 +1,9 @@
+# ninja log v5
+3	640	6724467586445199	CMakeFiles/project1.dir/main.cpp.obj	5633e3d03b2c2948
+16	327	6724465752983543	CMakeFiles/project1.dir/Exception/IdenticException.cpp.obj	ba56540482dd9190
+38	821	6724461988087233	CMakeFiles/project1.dir/UI/UI.cpp.obj	a19efc1ede845413
+640	790	6724467588015976	project1.exe	7411f33e77e7025b
+19	343	6724462545296461	CMakeFiles/project1.dir/Controller/Controller.cpp.obj	ac7846eecb023fa8
+2	493	6724467139332488	CMakeFiles/project1.dir/Repository/ProductRepo.cpp.obj	be170dd9740c66e1
+17	314	6724463002436985	CMakeFiles/project1.dir/Domain/Product.cpp.obj	2274681361972cb2
+0	348	6725069210614663	build.ninja	b09c5646d32c6436

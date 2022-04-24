@@ -3,4 +3,4 @@ project(project1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(project1 main.cpp)
+add_executable(project1 main.cpp Controller/Controller.cpp Controller/Controller.h Domain/Product.cpp Domain/Product.h Repository/ProductRepo.cpp Repository/ProductRepo.h UI/UI.cpp UI/UI.h Exception/IdenticException.cpp Exception/IdenticException.h Exception/NoElementException.cpp Exception/NoElementException.h Groceries/Groceries.cpp Groceries/Groceries.h PersonalCare/PersonalCare.cpp PersonalCare/PersonalCare.h)
