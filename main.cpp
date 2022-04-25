@@ -1,10 +1,26 @@
-#include <iostream>
-#include "./Repository/ProductRepo.h"
-#include "./Domain/Product.h"
+#include "./Controller/Controller.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    Product p1 = Product("123", "rosie", "legume", 123, 2);
+    Controller controller;
+    std::cout.fill(' ');
+    while(true) {
+        controller.setCommand1();
+        if (controller.getCommand1() == 1) {
+            controller.setCommand2();
+            if (controller.getCommand2() != 0)
+                controller.addProduct();
+        }
+        else if(controller.getCommand1() == 2) {
+            controller.seeAlLProducts();
+        }
+        else if(controller.getCommand1() == 4) {
+            controller.setCommand2();
+            controller.updateProduct();
+        }
+        else if(controller.getCommand1() == 3) {
+            controller.removeProduct();
+        }
+    }
 
     return 0;
 }

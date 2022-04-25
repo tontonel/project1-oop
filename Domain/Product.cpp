@@ -5,6 +5,8 @@
 #include "Product.h"
 #include <utility>
 #include <iostream>
+#include <iomanip>
+#include <sstream>
 
 Product::Product():
     price{0.0},
@@ -65,18 +67,20 @@ Product::Product(const Product& other) {
 
 Product& Product::operator=(const Product &other) = default;
 
-bool operator==(const Product &product1, const Product &product2) {
-    return product1.barcode == product2.barcode && product1.name == product2.name && product1.category == product2.category &&
-    product2.price == product1.price && product2.pieces == product1.pieces;
+std::ostream &operator<<(std::ostream &out, const Product& product) {
+    out << product.print();
+    return out;
 }
 
-std::ostream &operator<<(std::ostream &out, const Product& product) {
-    out << product.barcode << "\n";
-    out << product.category << "\n";
-    out << product.name << "\n";
-    out << product.price << "\n";
-    out << product.pieces << "\n";
-    return out;
+std::string Product::print() const {
+    std::stringstream stream;
+    stream << std::fixed << std::setprecision(2) << price;
+    return "barcode: " + this->barcode + "\nname of product: " + this->name + "\ncategory: " + this->category + "\nprice: " +
+            std::to_string(this->price) + "\npieces: " + stream.str() + "\n";
+}
+
+bool Product::operator==(const Product &product1) const {
+    return this->barcode == product1.getBarcode();
 }
 
 

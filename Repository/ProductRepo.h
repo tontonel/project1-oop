@@ -10,16 +10,16 @@
 
 class ProductRepo {
 private:
-    std::vector<Product> products;
+    std::vector<Product*> products;
 public:
     ProductRepo();
-    explicit ProductRepo(const std::vector<Product>&);
+    explicit ProductRepo(const std::vector<Product*>&);
     ProductRepo(const ProductRepo&);
     ProductRepo& operator=(const ProductRepo&);
-    void addProducts(const Product&);
-    Product removeProduct(const std::string& barcode);
-    void updateProduct(const std::string& barcode, const Product&);
-    const std::vector<Product>& getAllProducts() const;
+    void addProducts(Product*);
+    Product* removeProduct(const std::string& barcode);
+    void updateProduct(const std::string& barcode, Product*);
+    const std::vector<Product*>& getAllProducts() const;
     friend std::ostream& operator<<(std::ostream& out, const ProductRepo& repo);
 
 };

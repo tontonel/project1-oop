@@ -11,6 +11,8 @@ private:
     std::string barcode, name, category;
     double price;
     unsigned int pieces;
+protected:
+    virtual std::string print() const;
 public:
     Product();
     Product(std::string barcode, std::string name, std::string category, double price, unsigned int pieces);
@@ -25,7 +27,7 @@ public:
     std::string getBarcode() const;
     double getPrice() const;
     unsigned int getPieces() const;
-    friend bool operator==(const Product& product1, const Product& product2);
+    bool operator==(const Product& product1) const;
     friend std::ostream& operator<<(std::ostream& out, const Product&);
 };
 
