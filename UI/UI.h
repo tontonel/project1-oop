@@ -19,7 +19,15 @@
 
 
 class UI {
+protected:
 
+    static std::string readName();
+    static std::string readExpDate();
+    static double readPrice();
+    static unsigned int readPieces();
+    static unsigned int readGuarantee();
+    static std::string readCategory();
+    static std::string readBarcode();
 public:
     static unsigned int getMainMenuCommand();
     static void printException(const char*);
@@ -28,6 +36,7 @@ public:
     static void printRepo(const ProductRepo& repo);
     static std::string getBarcode();
     static void successfullyRemoved(Product*);
+
 };
 
 

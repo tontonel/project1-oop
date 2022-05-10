@@ -32,3 +32,8 @@ std::string Groceries::print() const {
             stream.str() + "\npieces: " + std::to_string(this->getPieces()) + "\nExpiration date: " +
            this->expDate;
 }
+
+void Groceries::read(std::istream& in) {
+    Product::read(in);
+    in >> expDate;
+}

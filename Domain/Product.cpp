@@ -76,11 +76,22 @@ std::string Product::print() const {
     std::stringstream stream;
     stream << std::fixed << std::setprecision(2) << price;
     return "barcode: " + this->barcode + "\nname of product: " + this->name + "\ncategory: " + this->category + "\nprice: " +
-            std::to_string(this->price) + "\npieces: " + stream.str() + "\n";
+            stream.str() + "\npieces: " + std::to_string(this->pieces) + "\n";
 }
 
 bool Product::operator==(const Product &product1) const {
     return this->barcode == product1.getBarcode();
 }
+
+
+void Product::read(std::istream& in) {
+    in >> this->barcode >> this->name >> this->category >> this->price >> this->pieces;
+}
+
+std::istream &operator>>(std::istream& in, Product& product) {
+    product.read(in);
+    return in;
+}
+
 
 

@@ -13,6 +13,7 @@ private:
     unsigned int pieces;
 protected:
     virtual std::string print() const;
+    virtual void read(std::istream&);
 public:
     Product();
     Product(std::string barcode, std::string name, std::string category, double price, unsigned int pieces);
@@ -29,6 +30,8 @@ public:
     unsigned int getPieces() const;
     bool operator==(const Product& product1) const;
     friend std::ostream& operator<<(std::ostream& out, const Product&);
+    friend std::istream& operator>>(std::istream&, Product&);
+
 };
 
 

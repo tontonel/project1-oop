@@ -54,7 +54,7 @@ std::ostream& operator<<(std::ostream &out, const ProductRepo &repo) {
 void ProductRepo::updateProduct(const std::string &barcode, Product* product) {
     for(auto i : this->products)
         if (i->getBarcode() == barcode) {
-            i = product;
+            *i = *product;
             return;
         }
     throw NoElementException(barcode);

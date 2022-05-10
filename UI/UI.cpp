@@ -3,144 +3,167 @@
 //
 
 #include "UI.h"
+using std::cout;
+using std::cin;
 
 unsigned int UI::getMainMenuCommand() {
     Menu::displayMainMenu();
     unsigned int command;
-    if( ! (std::cin >> command)) {
-        std::cin.clear();
-        throw InvalidInputException();
+    cout << "\nEnter your input: ";
+    while(!(cin >> command) || command < 0 || command > 4) {
+        cin.clear();
+        cin.ignore(10000,'\n');
+        cout << "Command is an integer between 1 and 4\n";
     }
-    if (command <= 0 || command > 4)
-        throw InvalidInputException();
     return command;
 }
 
 void UI::printException(const char* err){
-    std::cout << err << "\n";
+    cout << err << "\n";
 }
 
 unsigned int UI::getCategoryMenuCommand() {
     Menu::displayCategoryMenu();
     unsigned int command;
-    if(! (std::cin >> command)) {
-        std::cin.clear();
-        throw InvalidInputException();
+    cout << "\nEnter your input: ";
+    if(! (cin >> command) || command > 4 || command <= 0) {
+        cin.clear();
+        cin.ignore(10000,'\n');
+        cout << "Command is an integer between 1 and 4\n";
     }
-    if(command <= 0 || command > 4)
-        throw InvalidInputException();
     return command;
 }
 
 Product* UI::getProduct(unsigned int command) {
-    std::string barcode, category, name;
-    double price;
-    unsigned int pieces;
-    std::cout << "Barcode: ";
-    if (!(std::cin >> barcode)) {
-        std::cin.clear();
-        std::cin.ignore(10000,'\n');
-        throw InvalidInputException();
-    }
-    if(!Uitlity::validBarcode(barcode))
-        throw InvalidBarcodeException();
-    std::cout << "Name: ";
-    if(!(std::cin >> name)) {
-        std::cin.clear();
-        std::cin.ignore(10000,'\n');
-        throw InvalidInputException();
-    }
-    std::cout << "Category: ";
-    if (!(std::cin >> category)) {
-        std::cin.clear();
-        std::cin.ignore(10000,'\n');
-        throw InvalidInputException();
-    }
-    std::cout << "Price: ";
-    if (!(std::cin >> price)) {
-        std::cin.clear();
-        std::cin.ignore(10000,'\n');
-        throw InvalidInputException();
-    }
-    if (price < 0.0000)
-        throw InvalidQuantityException("price");
-    std::cout << "Pieces: ";
-    if (!(std::cin >> pieces)) {
-        std::cin.clear();
-        std::cin.ignore(10000,'\n');
-        throw InvalidInputException();
-    }
-    if (pieces <= 0)
-        throw InvalidQuantityException("pieces");
-    if (command == 1) {
-        std::string expDate;
-        std::cout << "Expiration date(format {day month year}): ";
-        unsigned int day, month, year;
-        if (!(std::cin >> day)) {
-            std::cin.clear();
-            std::cin.ignore(10000,'\n');
-            throw InvalidInputException();
-        }
-        if (!(std::cin >> month)) {
-            std::cin.clear();
-            std::cin.ignore(10000,'\n');
-            throw InvalidInputException();
-        }
-        if (!(std::cin >> year)) {
-            std::cin.clear();
-            std::cin.ignore(10000,'\n');
-            throw InvalidInputException();
-        }
-        if (!Uitlity::validDate(day, month, year))
-            throw InvalidDateException();
-        expDate = std::to_string(day) + "/" + std::to_string(month) + "/" + std::to_string(year);
-        auto* pGroceries = new Groceries;
-        Groceries product(barcode, name, category, price, pieces, expDate);
-        *pGroceries = product;
-        return pGroceries;
-    }
-    else if (command == 2) {
-        unsigned int guarantee;
-        std::cout << "Guarantee: ";
-        if(!(std::cin >> guarantee)) {
-            std::cin.clear();
-            std::cin.ignore(10000,'\n');
-            throw InvalidInputException();
-        }
-        if(guarantee <= 0)
-            throw InvalidQuantityException("guarantee");
-        auto* pElectronics = new Electronics;
-        *pElectronics = Electronics(barcode, name, category, price, pieces, guarantee);
-        return pElectronics;
-    }
-    else if (command == 3) {
-        auto *pPersonalCare = new PersonalCare;
-        *pPersonalCare = PersonalCare(barcode, name, category, price, pieces);
-        return pPersonalCare;
-    }
-    else  {
-        auto *pProduct = new Product;
-        *pProduct = Product(barcode, name, category, price, pieces);
-        return pProduct;
-    }
+    std::string barcode = readBarcode();
+    std::string name = readName();
+    std::string expDate;
+    double price = readPrice();
+    unsigned  int pieces = readPieces();
+    if(command == 1)
+        expDate = readExpDate();
+    unsigned int guarantee;
+    if(command == 2)
+        guarantee = readGuarantee();
+    std::string category;
+    if(command > 3)
+        category = readCategory();
+    if(command == 1)
+        return new Groceries(barcode, name, "Groceries", price, pieces, expDate);
+    else if(command == 2)
+        return new Electronics(barcode, name, "Electronics", price, pieces, guarantee);
+    else if(command == 3)
+        return new PersonalCare(barcode, name, "Personal Care", price, pieces);
+    else
+        return new Product(barcode, name, category, price, pieces);
 }
 
 void UI::printRepo(const ProductRepo &repo) {
     if(!repo.getAllProducts().empty())
-        std::cout << repo;
+        cout << repo;
     else
-        std::cout << "There are no Products in repository\n";
+        cout << "There are no Products in repository\n";
+}
+
+void UI::successfullyRemoved(Product* product) {
+    cout << "Element" << product->getBarcode() << " successfully removed from repository\n";
+}
+
+std::string UI::readBarcode() {
+    std::string barcode;
+    do {
+        cout << "Barcode: ";
+        cin >> barcode;
+        if (!Uitlity::validBarcode(barcode))
+            cout << "Your barcode is invalid, a barcode should contain only digits and length of 7\n";
+    } while(!Uitlity::validBarcode(barcode));
+    return barcode;
+}
+
+std::string UI::readName() {
+    cout << "Name of product: ";
+    std::string name;
+    cin >> name;
+    return name;
+}
+
+std::string UI::readExpDate() {
+    int day, month, year;
+    do {
+        cout << "Expiration date format{day month year}: ";
+        cin >> day >> month >> year;
+        if(!Uitlity::validDate(day, month, year))
+            cout << "Your input date is invalid, please respect the format\n";
+    }
+    while(!Uitlity::validDate(day, month, year));
+    return std::to_string(day) + "/" +  std::to_string(month) + "/" + std::to_string(year);
+}
+
+double UI::readPrice() {
+    double price;
+    do {
+        cout << "Price: ";
+        while(!(cin >> price)) {
+            cout << "Price is a number\n";
+            std::cin.clear();
+            std::cin.ignore(10000,'\n');
+            cout << "Price: ";
+        }
+        if(price <= 0.00)
+            cout << "This should be a positive number\n";
+    } while(price <= 0.00);
+    return price;
+}
+
+unsigned int UI::readPieces() {
+    unsigned int pieces;
+    do {
+        cout << "Pieces: ";
+        while(!(cin >> pieces)) {
+            cout << "Pieces is a number\n";
+            std::cin.clear();
+            std::cin.ignore(10000,'\n');
+            cout << "Pieces: ";
+        }
+        if(pieces <= 0)
+            cout << "This should be a positive number\n";
+
+    } while(pieces <= 0);
+    return pieces;
+}
+
+unsigned int UI::readGuarantee() {
+    unsigned int guarantee;
+    do {
+        cout << "Guarantee: ";
+        while(!(cin >> guarantee)) {
+            cout << "Guarantee is a number\n";
+            std::cin.clear();
+            std::cin.ignore(10000,'\n');
+            cout << "Guarantee: ";
+        }
+        if(guarantee <= 0)
+            cout << "This should be a positive number\n";
+
+    } while(guarantee <= 0);
+    return guarantee;
+}
+
+std::string UI::readCategory() {
+    std::string category;
+    cout << "Category: ";
+    cin >> category;
+    return category;
 }
 
 std::string UI::getBarcode() {
     std::string barcode;
-    std::cout << "Barcode: ";
-    std::cin >> barcode;
-    if(!Uitlity::validBarcode(barcode))
-        throw InvalidBarcodeException();
+    do {
+        std::cout << "Input your target product Barcode: ";
+        std::cin >> barcode;
+        if(!Uitlity::validBarcode(barcode))
+            cout << "Your barcode is invalid\n";
+    } while(!Uitlity::validBarcode(barcode));
     return barcode;
 }
 
-void UI::successfullyRemoved(Product* product) {
-    std::cout << "Element" << *product << "Successfully removed from repository\n";
-}

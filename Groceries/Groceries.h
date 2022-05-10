@@ -13,13 +13,13 @@ private:
     std::string expDate;
 protected:
     std::string print() const override;
+    void read(std::istream&) override;
 public:
     Groceries();
     Groceries(const std::string&, const std::string&, const std::string&, double, unsigned int, const std::string& _expDate);
     const std::string& getExpDate() const;
     void setExpDate (const std::string&);
     friend std::ostream& operator<<(std::ostream&, const Groceries&);
-
 };
 
 

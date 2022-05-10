@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/project1.dir/Controller/Controller.cpp.o"
+  "CMakeFiles/project1.dir/Controller/Controller.cpp.o.d"
+  "CMakeFiles/project1.dir/Domain/Product.cpp.o"
+  "CMakeFiles/project1.dir/Domain/Product.cpp.o.d"
+  "CMakeFiles/project1.dir/Electronics/Electronics.cpp.o"
+  "CMakeFiles/project1.dir/Electronics/Electronics.cpp.o.d"
+  "CMakeFiles/project1.dir/Exception/IdenticException.cpp.o"
+  "CMakeFiles/project1.dir/Exception/IdenticException.cpp.o.d"
+  "CMakeFiles/project1.dir/Exception/InvalidBarcodeException.cpp.o"
+  "CMakeFiles/project1.dir/Exception/InvalidBarcodeException.cpp.o.d"
+  "CMakeFiles/project1.dir/Exception/InvalidDateException.cpp.o"
+  "CMakeFiles/project1.dir/Exception/InvalidDateException.cpp.o.d"
+  "CMakeFiles/project1.dir/Exception/InvalidInputException.cpp.o"
+  "CMakeFiles/project1.dir/Exception/InvalidInputException.cpp.o.d"
+  "CMakeFiles/project1.dir/Exception/InvalidQuantityException.cpp.o"
+  "CMakeFiles/project1.dir/Exception/InvalidQuantityException.cpp.o.d"
+  "CMakeFiles/project1.dir/Exception/NoElementException.cpp.o"
+  "CMakeFiles/project1.dir/Exception/NoElementException.cpp.o.d"
+  "CMakeFiles/project1.dir/Groceries/Groceries.cpp.o"
+  "CMakeFiles/project1.dir/Groceries/Groceries.cpp.o.d"
+  "CMakeFiles/project1.dir/PersonalCare/PersonalCare.cpp.o"
+  "CMakeFiles/project1.dir/PersonalCare/PersonalCare.cpp.o.d"
+  "CMakeFiles/project1.dir/Repository/ProductRepo.cpp.o"
+  "CMakeFiles/project1.dir/Repository/ProductRepo.cpp.o.d"
+  "CMakeFiles/project1.dir/UI/Menu.cpp.o"
+  "CMakeFiles/project1.dir/UI/Menu.cpp.o.d"
+  "CMakeFiles/project1.dir/UI/UI.cpp.o"
+  "CMakeFiles/project1.dir/UI/UI.cpp.o.d"
+  "CMakeFiles/project1.dir/Utilty/Uitlity.cpp.o"
+  "CMakeFiles/project1.dir/Utilty/Uitlity.cpp.o.d"
+  "CMakeFiles/project1.dir/main.cpp.o"
+  "CMakeFiles/project1.dir/main.cpp.o.d"
+  "project1"
+  "project1.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/project1.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

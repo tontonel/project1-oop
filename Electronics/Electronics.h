@@ -12,6 +12,7 @@ private:
     unsigned int guarantee;
 protected:
     std::string print() const override;
+    void read(std::istream&) override;
 public:
     Electronics();
     Electronics(const std::string&, const std::string&, const std::string&, double, unsigned int, unsigned int);

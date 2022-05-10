@@ -4,7 +4,7 @@
 
 #include "Electronics.h"
 #include <iomanip>
-#include <sstream>
+#include <iostream>
 
 Electronics::Electronics() : Product(){
     this->guarantee = 0;
@@ -35,6 +35,11 @@ unsigned int Electronics::getGuarantee() const {
 
 void Electronics::setGuarantee(unsigned int _guarantee) {
     this->guarantee = _guarantee;
+}
+
+void Electronics::read(std::istream& in) {
+    Product::read(in);
+    in >> guarantee;
 }
 
 
