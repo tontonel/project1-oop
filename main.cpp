@@ -43,6 +43,11 @@ int main() {
             } catch (const std::domain_error& err) {
                 UI::printException(err.what());
             }
+        else if(command1 == 5) {
+            controller.undo();
+        }
+        else if(command1 == 6)
+            controller.redo();
         else if (command1 == 0)
             exit(1);
     }

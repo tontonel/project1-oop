@@ -6,15 +6,51 @@
 #define PROJECT1_UNDOREDO_H
 #include <stack>
 #include "../Domain/Product.h"
+#include "../Persistency/FileRepo.h"
 
-class undoRedo {
-private:
-    std::stack<undoRedo*> undoStack;
-    std::stack<undoRedo*> redoStack;
+class UndoRedo {
 public:
-    virtual void undo() = 0;
-    virtual void redo() = 0;
+    UndoRedo() = default;
+    virtual void undo(FileRepo&) = 0;
+    virtual void redo(FileRepo&) = 0;
+};
+class UndoRedoAdd : public UndoRedo{
+    Product* product;
+public:
+    UndoRedoAdd(Product*);
+    void undo(FileRepo&) override;
+    void redo(FileRepo&) override;
 };
 
+class UndoRedoRemove : public UndoRedo {
+private:
+    Product* product;
+public:
+    UndoRedoRemove(Product*);
+    void undo(FileRepo&) override;
+    void redo(FileRepo&) override;
+};
+
+class UndoRedoUpdate : public UndoRedo {
+private:
+    Product *oldProduct, *newProduct;
+public:
+    UndoRedoUpdate(Product*, Product*);
+    void undo(FileRepo&) override;
+    void redo(FileRepo&) override;
+};
+
+class UndoRedoManager {
+private:
+    std::stack<UndoRedo*> undoStack = {};
+    std::stack<UndoRedo*> redoStack = {};
+    FileRepo& repo;
+public:
+    explicit UndoRedoManager(FileRepo& _repo);
+    void execute(UndoRedo*);
+    void undo();
+    void redo();
+
+};
 
 #endif //PROJECT1_UNDOREDO_H

@@ -60,4 +60,11 @@ void ProductRepo::updateProduct(const std::string &barcode, Product* product) {
     throw NoElementException(barcode);
 }
 
+Product* ProductRepo::getProductByBarcode(const std::string& barcode) {
+    for(auto i : this->products)
+        if(i->getBarcode() == barcode)
+            return i;
+    throw NoElementException(barcode);
+}
+
 ProductRepo &ProductRepo::operator=(const ProductRepo & other) = default;

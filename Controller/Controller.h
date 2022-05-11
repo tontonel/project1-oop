@@ -3,9 +3,7 @@
 //
 #include "../Persistency/FileRepo.h"
 #include "../Domain/Product.h"
-
-
-
+#include "../UndoRedo/undoRedo.h"
 
 #ifndef PROJECT1_CONTROLLER_H
 #define PROJECT1_CONTROLLER_H
@@ -13,14 +11,16 @@
 
 class Controller {
 private:
-    FileRepo* repo = nullptr;
+    FileRepo repo;
+    UndoRedoManager undoRedo;
 public:
     Controller();
-    ~Controller();
     void addProduct(Product*);
     const ProductRepo& seeAlLProducts();
     void updateProduct(const std::string&, Product*);
     void removeProduct(const std::string&);
+    void undo();
+    void redo();
 };
 
 

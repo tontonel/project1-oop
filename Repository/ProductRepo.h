@@ -4,9 +4,9 @@
 #include <vector>
 #include "../Domain/Product.h"
 
+
 #ifndef PROJECT1_PRODUCTREPO_H
 #define PROJECT1_PRODUCTREPO_H
-
 
 class ProductRepo {
 private:
@@ -20,6 +20,7 @@ public:
     Product* removeProduct(const std::string& barcode);
     void updateProduct(const std::string& barcode, Product*);
     const std::vector<Product*>& getAllProducts() const;
+    Product* getProductByBarcode(const std::string& barcode);
     friend std::ostream& operator<<(std::ostream& out, const ProductRepo& repo);
 
 };

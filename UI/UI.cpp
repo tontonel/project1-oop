@@ -10,10 +10,11 @@ unsigned int UI::getMainMenuCommand() {
     Menu::displayMainMenu();
     unsigned int command;
     cout << "\nEnter your input: ";
-    while(!(cin >> command) || command < 0 || command > 4) {
+    while (!(cin >> command) || command < 0 || command > 6) {
         cin.clear();
-        cin.ignore(10000,'\n');
+        cin.ignore(10000, '\n');
         cout << "Command is an integer between 1 and 4\n";
+        cout << "\nEnter your input: ";
     }
     return command;
 }
@@ -26,10 +27,11 @@ unsigned int UI::getCategoryMenuCommand() {
     Menu::displayCategoryMenu();
     unsigned int command;
     cout << "\nEnter your input: ";
-    if(! (cin >> command) || command > 4 || command <= 0) {
+    while(!(cin >> command) || command > 4 || command <= 0) {
         cin.clear();
         cin.ignore(10000,'\n');
         cout << "Command is an integer between 1 and 4\n";
+        cout << "Enter your input: ";
     }
     return command;
 }
