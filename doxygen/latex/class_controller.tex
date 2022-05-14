@@ -1,0 +1,72 @@
+\hypertarget{class_controller}{}\doxysection{Controller Class Reference}
+\label{class_controller}\index{Controller@{Controller}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_controller_abd379a80a180c5259f6379c9855b955e}{add\+Product}} (\mbox{\hyperlink{class_product}{Product}} $\ast$)
+\item 
+const \mbox{\hyperlink{class_product_repo}{Product\+Repo}} \& \mbox{\hyperlink{class_controller_a2646908026fc5a253e9856b3638c518d}{see\+Al\+LProducts}} ()
+\item 
+void \mbox{\hyperlink{class_controller_aff12947e7053c7a74531387ccd3198a4}{update\+Product}} (const std\+::string \&, \mbox{\hyperlink{class_product}{Product}} $\ast$)
+\item 
+void \mbox{\hyperlink{class_controller_a739cd8664ed6a4edbc6f99dd030a716f}{remove\+Product}} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_controller_a52b8812ceca0b4368dea2e2b4399d860}\label{class_controller_a52b8812ceca0b4368dea2e2b4399d860}} 
+void {\bfseries undo} ()
+\begin{DoxyCompactList}\small\item\em Undo a repository operation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_controller_aeb55fe16b48f14b00c179e95a0372a17}\label{class_controller_aeb55fe16b48f14b00c179e95a0372a17}} 
+void {\bfseries redo} ()
+\begin{DoxyCompactList}\small\item\em redo a repository operation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controller_abd379a80a180c5259f6379c9855b955e}\label{class_controller_abd379a80a180c5259f6379c9855b955e}} 
+\index{Controller@{Controller}!addProduct@{addProduct}}
+\index{addProduct@{addProduct}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{addProduct()}{addProduct()}}
+{\footnotesize\ttfamily void Controller\+::add\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product}{Product}} $\ast$}]{product }\end{DoxyParamCaption})}
+
+this controls adding a product in repository 
+\begin{DoxyParams}{Parameters}
+{\em product} & is a \mbox{\hyperlink{class_product}{Product}} Polymorphic pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_controller_a739cd8664ed6a4edbc6f99dd030a716f}\label{class_controller_a739cd8664ed6a4edbc6f99dd030a716f}} 
+\index{Controller@{Controller}!removeProduct@{removeProduct}}
+\index{removeProduct@{removeProduct}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{removeProduct()}{removeProduct()}}
+{\footnotesize\ttfamily void Controller\+::remove\+Product (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{barcode }\end{DoxyParamCaption})}
+
+removes a target product with given barcode in \mbox{\hyperlink{class_product_repo}{Product\+Repo}} 
+\begin{DoxyParams}{Parameters}
+{\em barcode} & the target barcode \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_controller_a2646908026fc5a253e9856b3638c518d}\label{class_controller_a2646908026fc5a253e9856b3638c518d}} 
+\index{Controller@{Controller}!seeAlLProducts@{seeAlLProducts}}
+\index{seeAlLProducts@{seeAlLProducts}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{seeAlLProducts()}{seeAlLProducts()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_product_repo}{Product\+Repo}} \& Controller\+::see\+Al\+LProducts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+this returns all the Products in the repository \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_product_repo}{Product\+Repo}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_aff12947e7053c7a74531387ccd3198a4}\label{class_controller_aff12947e7053c7a74531387ccd3198a4}} 
+\index{Controller@{Controller}!updateProduct@{updateProduct}}
+\index{updateProduct@{updateProduct}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{updateProduct()}{updateProduct()}}
+{\footnotesize\ttfamily void Controller\+::update\+Product (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{barcode,  }\item[{\mbox{\hyperlink{class_product}{Product}} $\ast$}]{product }\end{DoxyParamCaption})}
+
+this controls updating an \mbox{\hyperlink{class_product}{Product}} in \mbox{\hyperlink{class_product_repo}{Product\+Repo}} 
+\begin{DoxyParams}{Parameters}
+{\em barcode} & target barcode string \\
+\hline
+{\em product} & new Polymorphic object \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+OOP\+\_\+labs/project1/\+Controller/Controller.\+h\item 
+D\+:/\+OOP\+\_\+labs/project1/\+Controller/Controller.\+cpp\end{DoxyCompactItemize}

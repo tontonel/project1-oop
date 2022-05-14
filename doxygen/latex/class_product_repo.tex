@@ -1,0 +1,125 @@
+\hypertarget{class_product_repo}{}\doxysection{Product\+Repo Class Reference}
+\label{class_product_repo}\index{ProductRepo@{ProductRepo}}
+Inheritance diagram for Product\+Repo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_product_repo}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_repo_ac1c91b393fd91e5c724d41c53089c5cb}\label{class_product_repo_ac1c91b393fd91e5c724d41c53089c5cb}} 
+{\bfseries Product\+Repo} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_product_repo_a24e408c3f4f46109e56427a57aab44f5}{Product\+Repo}} (const std\+::vector$<$ \mbox{\hyperlink{class_product}{Product}} $\ast$ $>$ \&)
+\item 
+\mbox{\Hypertarget{class_product_repo_a50ee927dbce3caea801a3027c46c15ea}\label{class_product_repo_a50ee927dbce3caea801a3027c46c15ea}} 
+{\bfseries Product\+Repo} (const \mbox{\hyperlink{class_product_repo}{Product\+Repo}} \&)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_product_repo_ae82258a828d69e39859aae29c7902a82}\label{class_product_repo_ae82258a828d69e39859aae29c7902a82}} 
+\mbox{\hyperlink{class_product_repo}{Product\+Repo}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_product_repo}{Product\+Repo}} \&)
+\begin{DoxyCompactList}\small\item\em default assigment constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_product_repo_a6e046fb436dc132b83843a775e6fb6eb}{add\+Products}} (\mbox{\hyperlink{class_product}{Product}} $\ast$)
+\item 
+\mbox{\hyperlink{class_product}{Product}} $\ast$ \mbox{\hyperlink{class_product_repo_a7b23efbc30899fb908bab601c43b04b5}{remove\+Product}} (const std\+::string \&barcode)
+\item 
+void \mbox{\hyperlink{class_product_repo_abf69d67c48ffb5f4fc4a836c27941e6c}{update\+Product}} (const std\+::string \&barcode, \mbox{\hyperlink{class_product}{Product}} $\ast$)
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{class_product}{Product}} $\ast$ $>$ \& \mbox{\hyperlink{class_product_repo_ab984f9668dc32d4292280a0459b56f95}{get\+All\+Products}} () const
+\item 
+\mbox{\hyperlink{class_product}{Product}} $\ast$ \mbox{\hyperlink{class_product_repo_a622b2bab81903a7f30d3140567dc86c7}{get\+Product\+By\+Barcode}} (const std\+::string \&barcode)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_repo_a265cb68a7bf2c12f547331dc5fada61a}\label{class_product_repo_a265cb68a7bf2c12f547331dc5fada61a}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, const \mbox{\hyperlink{class_product_repo}{Product\+Repo}} \&repo)
+\begin{DoxyCompactList}\small\item\em output operator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_product_repo_a24e408c3f4f46109e56427a57aab44f5}\label{class_product_repo_a24e408c3f4f46109e56427a57aab44f5}} 
+\index{ProductRepo@{ProductRepo}!ProductRepo@{ProductRepo}}
+\index{ProductRepo@{ProductRepo}!ProductRepo@{ProductRepo}}
+\doxysubsubsection{\texorpdfstring{ProductRepo()}{ProductRepo()}}
+{\footnotesize\ttfamily Product\+Repo\+::\+Product\+Repo (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_product}{Product}} $\ast$ $>$ \&}]{\+\_\+products }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+constructor 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+products} & a polymorphic vector with \mbox{\hyperlink{class_product}{Product}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_product_repo_a6e046fb436dc132b83843a775e6fb6eb}\label{class_product_repo_a6e046fb436dc132b83843a775e6fb6eb}} 
+\index{ProductRepo@{ProductRepo}!addProducts@{addProducts}}
+\index{addProducts@{addProducts}!ProductRepo@{ProductRepo}}
+\doxysubsubsection{\texorpdfstring{addProducts()}{addProducts()}}
+{\footnotesize\ttfamily void Product\+Repo\+::add\+Products (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product}{Product}} $\ast$}]{new\+Product }\end{DoxyParamCaption})}
+
+add products in repository 
+\begin{DoxyParams}{Parameters}
+{\em new\+Product} & given \mbox{\hyperlink{class_product}{Product}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+this function throws an error if there is another product with same barcode in repository 
+\end{DoxyAttention}
+\mbox{\Hypertarget{class_product_repo_ab984f9668dc32d4292280a0459b56f95}\label{class_product_repo_ab984f9668dc32d4292280a0459b56f95}} 
+\index{ProductRepo@{ProductRepo}!getAllProducts@{getAllProducts}}
+\index{getAllProducts@{getAllProducts}!ProductRepo@{ProductRepo}}
+\doxysubsubsection{\texorpdfstring{getAllProducts()}{getAllProducts()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{class_product}{Product}} $\ast$ $>$ \& Product\+Repo\+::get\+All\+Products (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+list of Products getter \begin{DoxyReturn}{Returns}
+a const reference vector of \mbox{\hyperlink{class_product}{Product}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_product_repo_a622b2bab81903a7f30d3140567dc86c7}\label{class_product_repo_a622b2bab81903a7f30d3140567dc86c7}} 
+\index{ProductRepo@{ProductRepo}!getProductByBarcode@{getProductByBarcode}}
+\index{getProductByBarcode@{getProductByBarcode}!ProductRepo@{ProductRepo}}
+\doxysubsubsection{\texorpdfstring{getProductByBarcode()}{getProductByBarcode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_product}{Product}} $\ast$ Product\+Repo\+::get\+Product\+By\+Barcode (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{barcode }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_product}{Product}} getter with barcode 
+\begin{DoxyParams}{Parameters}
+{\em barcode} & given barcode \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_product_repo_a7b23efbc30899fb908bab601c43b04b5}\label{class_product_repo_a7b23efbc30899fb908bab601c43b04b5}} 
+\index{ProductRepo@{ProductRepo}!removeProduct@{removeProduct}}
+\index{removeProduct@{removeProduct}!ProductRepo@{ProductRepo}}
+\doxysubsubsection{\texorpdfstring{removeProduct()}{removeProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_product}{Product}} $\ast$ Product\+Repo\+::remove\+Product (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{barcode }\end{DoxyParamCaption})}
+
+remove \mbox{\hyperlink{class_product}{Product}} from repository with barcode 
+\begin{DoxyParams}{Parameters}
+{\em barcode} & given barcode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+this function doesn\textquotesingle{}t throw any error if there is no \mbox{\hyperlink{class_product}{Product}} with such barcode 
+\end{DoxyAttention}
+\mbox{\Hypertarget{class_product_repo_abf69d67c48ffb5f4fc4a836c27941e6c}\label{class_product_repo_abf69d67c48ffb5f4fc4a836c27941e6c}} 
+\index{ProductRepo@{ProductRepo}!updateProduct@{updateProduct}}
+\index{updateProduct@{updateProduct}!ProductRepo@{ProductRepo}}
+\doxysubsubsection{\texorpdfstring{updateProduct()}{updateProduct()}}
+{\footnotesize\ttfamily void Product\+Repo\+::update\+Product (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{barcode,  }\item[{\mbox{\hyperlink{class_product}{Product}} $\ast$}]{product }\end{DoxyParamCaption})}
+
+update a \mbox{\hyperlink{class_product}{Product}} based on barcode 
+\begin{DoxyParams}{Parameters}
+{\em product} & the new \mbox{\hyperlink{class_product}{Product}} to update \\
+\hline
+{\em barcode} & to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+this function throw an error if there is no \mbox{\hyperlink{class_product}{Product}} with such barcode 
+\end{DoxyAttention}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+OOP\+\_\+labs/project1/\+Repository/Product\+Repo.\+h\item 
+D\+:/\+OOP\+\_\+labs/project1/\+Repository/Product\+Repo.\+cpp\end{DoxyCompactItemize}

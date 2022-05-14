@@ -6,8 +6,11 @@
 
 #include <utility>
 
+///constructor
 OpenFileException::OpenFileException(std::string  _message) : message(std::move(_message)) {}
 
+
+///exception message getter
 const char *OpenFileException::what() const noexcept {
     return message.c_str();
 }

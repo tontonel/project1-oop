@@ -18,7 +18,7 @@ private:
     bool read_from_file();
 
 public:
-    explicit FileRepo(std::string);
+    explicit FileRepo(const std::string&);
 
 };
 

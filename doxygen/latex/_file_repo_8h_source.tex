@@ -1,0 +1,32 @@
+\hypertarget{_file_repo_8h_source}{}\doxysection{File\+Repo.\+h}
+\label{_file_repo_8h_source}\index{D:/OOP\_labs/project1/Persistency/FileRepo.h@{D:/OOP\_labs/project1/Persistency/FileRepo.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by tionu on 5/3/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROJECT1\_FILEREPO\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROJECT1\_FILEREPO\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../Repository/ProductRepo.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}../Domain/Product.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_repo}{FileRepo}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_product_repo}{ProductRepo}}\{}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_product_repo}{ProductRepo}} repo;}
+\DoxyCodeLine{17     std::string filePath;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{bool} read\_from\_file();}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_file_repo_a6f3b62ffd86c96e71d6af8fe990be71a}{FileRepo}}(\textcolor{keyword}{const} std::string\&);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJECT1\_FILEREPO\_H}}
+
+\end{DoxyCode}

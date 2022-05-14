@@ -4,6 +4,10 @@
 
 #include "Uitlity.h"
 
+///date validation funciton
+///@param day of month
+///@param month of year
+///@param year of date
 bool Uitlity::validDate(unsigned int day, unsigned int month, unsigned int year) {
     if (day <= 0)
         return false;
@@ -61,6 +65,8 @@ bool Uitlity::validDate(unsigned int day, unsigned int month, unsigned int year)
     return true;
 }
 
+///validates a barcode
+///@param barcode given barcode
 bool Uitlity::validBarcode(const std::string& barcode) {
     for (const char& c : barcode)
         if(!std::isdigit(c))

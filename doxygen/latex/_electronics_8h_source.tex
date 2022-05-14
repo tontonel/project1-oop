@@ -1,0 +1,31 @@
+\hypertarget{_electronics_8h_source}{}\doxysection{Electronics.\+h}
+\label{_electronics_8h_source}\index{D:/OOP\_labs/project1/Electronics/Electronics.h@{D:/OOP\_labs/project1/Electronics/Electronics.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by tionu on 4/24/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../Domain/Product.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef PROJECT1\_ELECTRONICS\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define PROJECT1\_ELECTRONICS\_H}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_electronics}{Electronics}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_product}{Product}} \{}
+\DoxyCodeLine{11 \textcolor{keyword}{private}:}
+\DoxyCodeLine{12     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} guarantee;}
+\DoxyCodeLine{13 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{14     std::string \mbox{\hyperlink{class_electronics_ae3df1c28b171b505c5db742115fd3aa6}{print}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_electronics_ad17031c3db341812c8cd3b50307bacbb}{read}}(std::istream\&) \textcolor{keyword}{override};}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_electronics}{Electronics}}();}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_electronics}{Electronics}}(\textcolor{keyword}{const} std::string\&, \textcolor{keyword}{const} std::string\&, \textcolor{keyword}{const} std::string\&, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int});}
+\DoxyCodeLine{19     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_electronics_a2c328d60f3b51e2ef6fe6e6f565d6c96}{getGuarantee}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} setGuarantee(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int});}
+\DoxyCodeLine{21     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{class_electronics_a2ee17d5629b351ba80dde82f1b86cc96}{operator<<}}(std::ostream\&, \textcolor{keyword}{const} \mbox{\hyperlink{class_electronics}{Electronics}}\&);}
+\DoxyCodeLine{22 \};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJECT1\_ELECTRONICS\_H}}
+
+\end{DoxyCode}

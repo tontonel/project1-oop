@@ -3,15 +3,11 @@
 //
 #include "Menu.h"
 #include <iostream>
-#include "../Exception/InvalidInputException.h"
 #include "../Groceries/Groceries.h"
 #include "../Electronics/Electronics.h"
 #include "../PersonalCare/PersonalCare.h"
 #include "../Domain/Product.h"
-#include "../Exception/InvalidBarcodeException.h"
-#include "../Exception/InvalidQuantityException.h"
 #include "../Utilty/Uitlity.h"
-#include "../Exception/InvalidDateException.h"
 #include "../Repository/ProductRepo.h"
 
 #ifndef PROJECT1_UI_H

@@ -8,23 +8,27 @@
 Groceries::Groceries() : Product() {
     this->expDate = "";
 }
+
+///constructor
 Groceries::Groceries(const std::string& barcode,const std::string& name, const std::string& category, double price,
                      unsigned int pieces, const std::string& _expDate) : Product(barcode, name, category, price, pieces) {
-    this->expDate = _expDate;}
+    this->expDate = _expDate;
+}
 
+///ExpDate setter
+///@param _expDate given expiration date
 void Groceries::setExpDate(const std::string& _expDate) {
     this->expDate = _expDate;
 }
 
+///expDate setter
+///@return a string with expiration date
 const std::string& Groceries::getExpDate() const {
     return this->expDate;
 }
 
-std::ostream &operator<<(std::ostream& out, const Groceries& grocery) {
-    out << grocery.print();
-    return out;
-}
-
+///print function override
+///@return a string with output
 std::string Groceries::print() const {
     std::stringstream stream;
     stream << std::fixed << std::setprecision(2) << this->getPrice();
@@ -33,6 +37,8 @@ std::string Groceries::print() const {
            this->expDate;
 }
 
+///read function override
+///@param in return through reference an input stream
 void Groceries::read(std::istream& in) {
     Product::read(in);
     in >> expDate;

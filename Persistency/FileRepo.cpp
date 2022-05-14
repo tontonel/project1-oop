@@ -3,20 +3,22 @@
 //
 
 #include "FileRepo.h"
-#include <fstream>
 #include <sstream>
 #include "../Groceries/Groceries.h"
 #include "../PersonalCare/PersonalCare.h"
 #include "../Electronics/Electronics.h"
 #include "../Exception/OpenFileException.h"
 
-FileRepo::FileRepo(std::string  _filePath): ProductRepo(){
+///FileRepo constructor
+FileRepo::FileRepo(const std::string&  _filePath): ProductRepo(){
     this->filePath = _filePath;
     bool flagRead = read_from_file();
     if(!flagRead)
         throw OpenFileException("File " + filePath + " couldn't be opened\n");
 }
 
+///read form a given file function
+///@return a boolean if the content of the file can be read or not
 bool FileRepo::read_from_file() {
     std::ifstream in{filePath};
     std::string line;

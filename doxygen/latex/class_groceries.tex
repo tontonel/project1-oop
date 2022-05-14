@@ -1,0 +1,88 @@
+\hypertarget{class_groceries}{}\doxysection{Groceries Class Reference}
+\label{class_groceries}\index{Groceries@{Groceries}}
+Inheritance diagram for Groceries\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_groceries}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_groceries_a9b0ea9d4ab61ed9539116555fbcfeed6}\label{class_groceries_a9b0ea9d4ab61ed9539116555fbcfeed6}} 
+{\bfseries Groceries} (const std\+::string \&, const std\+::string \&, const std\+::string \&, double, unsigned int, const std\+::string \&\+\_\+exp\+Date)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_groceries_a00a4b9ae18717c8fa8bb723c8f95fc3d}{get\+Exp\+Date}} () const
+\item 
+void \mbox{\hyperlink{class_groceries_a59ef75019bda3465ea5e180f2b94cd30}{set\+Exp\+Date}} (const std\+::string \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_groceries_a1c049c561c1d130a672392e6f4ccc816}{print}} () const override
+\item 
+void \mbox{\hyperlink{class_groceries_a3ab7f8c16b91da292111d75c5f9ef95b}{read}} (std\+::istream \&) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_groceries_a744d94b015284e91dcb472a76d9ffe53}\label{class_groceries_a744d94b015284e91dcb472a76d9ffe53}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{class_groceries}{Groceries}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_groceries_a00a4b9ae18717c8fa8bb723c8f95fc3d}\label{class_groceries_a00a4b9ae18717c8fa8bb723c8f95fc3d}} 
+\index{Groceries@{Groceries}!getExpDate@{getExpDate}}
+\index{getExpDate@{getExpDate}!Groceries@{Groceries}}
+\doxysubsubsection{\texorpdfstring{getExpDate()}{getExpDate()}}
+{\footnotesize\ttfamily const std\+::string \& Groceries\+::get\+Exp\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+exp\+Date setter \begin{DoxyReturn}{Returns}
+a string with expiration date 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_groceries_a1c049c561c1d130a672392e6f4ccc816}\label{class_groceries_a1c049c561c1d130a672392e6f4ccc816}} 
+\index{Groceries@{Groceries}!print@{print}}
+\index{print@{print}!Groceries@{Groceries}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily std\+::string Groceries\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+print function override \begin{DoxyReturn}{Returns}
+a string with output 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_product_a870f482ba00fce3af67fd947a3cb6554}{Product}}.
+
+\mbox{\Hypertarget{class_groceries_a3ab7f8c16b91da292111d75c5f9ef95b}\label{class_groceries_a3ab7f8c16b91da292111d75c5f9ef95b}} 
+\index{Groceries@{Groceries}!read@{read}}
+\index{read@{read}!Groceries@{Groceries}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void Groceries\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+read function override 
+\begin{DoxyParams}{Parameters}
+{\em in} & return through reference an input stream \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_product_a9b88d8b605f20bec81ec3459599ee1e1}{Product}}.
+
+\mbox{\Hypertarget{class_groceries_a59ef75019bda3465ea5e180f2b94cd30}\label{class_groceries_a59ef75019bda3465ea5e180f2b94cd30}} 
+\index{Groceries@{Groceries}!setExpDate@{setExpDate}}
+\index{setExpDate@{setExpDate}!Groceries@{Groceries}}
+\doxysubsubsection{\texorpdfstring{setExpDate()}{setExpDate()}}
+{\footnotesize\ttfamily void Groceries\+::set\+Exp\+Date (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+exp\+Date }\end{DoxyParamCaption})}
+
+Exp\+Date setter 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+exp\+Date} & given expiration date \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+OOP\+\_\+labs/project1/\+Groceries/Groceries.\+h\item 
+D\+:/\+OOP\+\_\+labs/project1/\+Groceries/Groceries.\+cpp\end{DoxyCompactItemize}

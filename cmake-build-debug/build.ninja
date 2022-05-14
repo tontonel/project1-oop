@@ -115,35 +115,11 @@ build CMakeFiles/project1.dir/UI/Menu.cpp.obj: CXX_COMPILER__project1_Debug D$:/
   OBJECT_DIR = CMakeFiles\project1.dir
   OBJECT_FILE_DIR = CMakeFiles\project1.dir\UI
 
-build CMakeFiles/project1.dir/Exception/InvalidInputException.cpp.obj: CXX_COMPILER__project1_Debug D$:/OOP_labs/project1/Exception/InvalidInputException.cpp || cmake_object_order_depends_target_project1
-  DEP_FILE = CMakeFiles\project1.dir\Exception\InvalidInputException.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\project1.dir
-  OBJECT_FILE_DIR = CMakeFiles\project1.dir\Exception
-
-build CMakeFiles/project1.dir/Exception/InvalidBarcodeException.cpp.obj: CXX_COMPILER__project1_Debug D$:/OOP_labs/project1/Exception/InvalidBarcodeException.cpp || cmake_object_order_depends_target_project1
-  DEP_FILE = CMakeFiles\project1.dir\Exception\InvalidBarcodeException.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\project1.dir
-  OBJECT_FILE_DIR = CMakeFiles\project1.dir\Exception
-
-build CMakeFiles/project1.dir/Exception/InvalidQuantityException.cpp.obj: CXX_COMPILER__project1_Debug D$:/OOP_labs/project1/Exception/InvalidQuantityException.cpp || cmake_object_order_depends_target_project1
-  DEP_FILE = CMakeFiles\project1.dir\Exception\InvalidQuantityException.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\project1.dir
-  OBJECT_FILE_DIR = CMakeFiles\project1.dir\Exception
-
 build CMakeFiles/project1.dir/Utilty/Uitlity.cpp.obj: CXX_COMPILER__project1_Debug D$:/OOP_labs/project1/Utilty/Uitlity.cpp || cmake_object_order_depends_target_project1
   DEP_FILE = CMakeFiles\project1.dir\Utilty\Uitlity.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\project1.dir
   OBJECT_FILE_DIR = CMakeFiles\project1.dir\Utilty
-
-build CMakeFiles/project1.dir/Exception/InvalidDateException.cpp.obj: CXX_COMPILER__project1_Debug D$:/OOP_labs/project1/Exception/InvalidDateException.cpp || cmake_object_order_depends_target_project1
-  DEP_FILE = CMakeFiles\project1.dir\Exception\InvalidDateException.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\project1.dir
-  OBJECT_FILE_DIR = CMakeFiles\project1.dir\Exception
 
 build CMakeFiles/project1.dir/Persistency/FileRepo.cpp.obj: CXX_COMPILER__project1_Debug D$:/OOP_labs/project1/Persistency/FileRepo.cpp || cmake_object_order_depends_target_project1
   DEP_FILE = CMakeFiles\project1.dir\Persistency\FileRepo.cpp.obj.d
@@ -177,7 +153,7 @@ build CMakeFiles/project1.dir/Tests/Tests.cpp.obj: CXX_COMPILER__project1_Debug 
 #############################################
 # Link the executable project1.exe
 
-build project1.exe: CXX_EXECUTABLE_LINKER__project1_Debug CMakeFiles/project1.dir/main.cpp.obj CMakeFiles/project1.dir/Controller/Controller.cpp.obj CMakeFiles/project1.dir/Domain/Product.cpp.obj CMakeFiles/project1.dir/Repository/ProductRepo.cpp.obj CMakeFiles/project1.dir/UI/UI.cpp.obj CMakeFiles/project1.dir/Exception/IdenticException.cpp.obj CMakeFiles/project1.dir/Exception/NoElementException.cpp.obj CMakeFiles/project1.dir/Groceries/Groceries.cpp.obj CMakeFiles/project1.dir/PersonalCare/PersonalCare.cpp.obj CMakeFiles/project1.dir/Electronics/Electronics.cpp.obj CMakeFiles/project1.dir/UI/Menu.cpp.obj CMakeFiles/project1.dir/Exception/InvalidInputException.cpp.obj CMakeFiles/project1.dir/Exception/InvalidBarcodeException.cpp.obj CMakeFiles/project1.dir/Exception/InvalidQuantityException.cpp.obj CMakeFiles/project1.dir/Utilty/Uitlity.cpp.obj CMakeFiles/project1.dir/Exception/InvalidDateException.cpp.obj CMakeFiles/project1.dir/Persistency/FileRepo.cpp.obj CMakeFiles/project1.dir/Exception/OpenFileException.cpp.obj CMakeFiles/project1.dir/UndoRedo/undoRedo.cpp.obj CMakeFiles/project1.dir/Tests/Tests.cpp.obj
+build project1.exe: CXX_EXECUTABLE_LINKER__project1_Debug CMakeFiles/project1.dir/main.cpp.obj CMakeFiles/project1.dir/Controller/Controller.cpp.obj CMakeFiles/project1.dir/Domain/Product.cpp.obj CMakeFiles/project1.dir/Repository/ProductRepo.cpp.obj CMakeFiles/project1.dir/UI/UI.cpp.obj CMakeFiles/project1.dir/Exception/IdenticException.cpp.obj CMakeFiles/project1.dir/Exception/NoElementException.cpp.obj CMakeFiles/project1.dir/Groceries/Groceries.cpp.obj CMakeFiles/project1.dir/PersonalCare/PersonalCare.cpp.obj CMakeFiles/project1.dir/Electronics/Electronics.cpp.obj CMakeFiles/project1.dir/UI/Menu.cpp.obj CMakeFiles/project1.dir/Utilty/Uitlity.cpp.obj CMakeFiles/project1.dir/Persistency/FileRepo.cpp.obj CMakeFiles/project1.dir/Exception/OpenFileException.cpp.obj CMakeFiles/project1.dir/UndoRedo/undoRedo.cpp.obj CMakeFiles/project1.dir/Tests/Tests.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\project1.dir

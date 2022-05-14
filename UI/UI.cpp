@@ -6,6 +6,8 @@
 using std::cout;
 using std::cin;
 
+///prints main menu and get a command form client
+///@return an int command from client
 unsigned int UI::getMainMenuCommand() {
     Menu::displayMainMenu();
     unsigned int command;
@@ -19,10 +21,13 @@ unsigned int UI::getMainMenuCommand() {
     return command;
 }
 
+///print exceptions
 void UI::printException(const char* err){
     cout << err << "\n";
 }
 
+///prints category menu and get a command from client
+///@return an int command form client
 unsigned int UI::getCategoryMenuCommand() {
     Menu::displayCategoryMenu();
     unsigned int command;
@@ -36,6 +41,8 @@ unsigned int UI::getCategoryMenuCommand() {
     return command;
 }
 
+///reading the polymorphic Product from client
+///@return a Product
 Product* UI::getProduct(unsigned int command) {
     std::string barcode = readBarcode();
     std::string name = readName();
@@ -60,6 +67,8 @@ Product* UI::getProduct(unsigned int command) {
         return new Product(barcode, name, category, price, pieces);
 }
 
+///prints the repository
+///@param repo the given ProductRepo object
 void UI::printRepo(const ProductRepo &repo) {
     if(!repo.getAllProducts().empty())
         cout << repo;
@@ -67,10 +76,14 @@ void UI::printRepo(const ProductRepo &repo) {
         cout << "There are no Products in repository\n";
 }
 
+///prints message for successfully removed Product object from repository
+///@param product the product removed from repository
 void UI::successfullyRemoved(Product* product) {
     cout << "Element" << product->getBarcode() << " successfully removed from repository\n";
 }
 
+///read with validation barcode
+///@return a string with barcode
 std::string UI::readBarcode() {
     std::string barcode;
     do {
@@ -82,6 +95,8 @@ std::string UI::readBarcode() {
     return barcode;
 }
 
+///reads a name with validation
+///@return a string with name
 std::string UI::readName() {
     cout << "Name of product: ";
     std::string name;
@@ -89,6 +104,8 @@ std::string UI::readName() {
     return name;
 }
 
+///reads expiration date with validation
+///@return a string with expiration date
 std::string UI::readExpDate() {
     int day, month, year;
     do {
@@ -101,6 +118,8 @@ std::string UI::readExpDate() {
     return std::to_string(day) + "/" +  std::to_string(month) + "/" + std::to_string(year);
 }
 
+///reads price with validation
+///@return a double with price
 double UI::readPrice() {
     double price;
     do {
@@ -117,6 +136,8 @@ double UI::readPrice() {
     return price;
 }
 
+///reads pieces with validation
+///@retun an int with pieces
 unsigned int UI::readPieces() {
     unsigned int pieces;
     do {
@@ -134,6 +155,8 @@ unsigned int UI::readPieces() {
     return pieces;
 }
 
+///reads guarantee with validation
+///@return an int with guarantee
 unsigned int UI::readGuarantee() {
     unsigned int guarantee;
     do {
@@ -151,6 +174,8 @@ unsigned int UI::readGuarantee() {
     return guarantee;
 }
 
+///reads category
+///@return a string with category
 std::string UI::readCategory() {
     std::string category;
     cout << "Category: ";
@@ -158,6 +183,8 @@ std::string UI::readCategory() {
     return category;
 }
 
+/// gets a barcode for removing an Product from repository with validation
+///@return a string with barcode
 std::string UI::getBarcode() {
     std::string barcode;
     do {

@@ -1,0 +1,35 @@
+\hypertarget{_product_repo_8h_source}{}\doxysection{Product\+Repo.\+h}
+\label{_product_repo_8h_source}\index{D:/OOP\_labs/project1/Repository/ProductRepo.h@{D:/OOP\_labs/project1/Repository/ProductRepo.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by tionu on 4/23/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../Domain/Product.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef PROJECT1\_PRODUCTREPO\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define PROJECT1\_PRODUCTREPO\_H}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_product_repo}{ProductRepo}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{private}:}
+\DoxyCodeLine{13     std::vector<Product*> products;}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_product_repo_ac1c91b393fd91e5c724d41c53089c5cb}{ProductRepo}}();}
+\DoxyCodeLine{16     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_product_repo_ac1c91b393fd91e5c724d41c53089c5cb}{ProductRepo}}(\textcolor{keyword}{const} std::vector<Product*>\&);}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_product_repo_ac1c91b393fd91e5c724d41c53089c5cb}{ProductRepo}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_product_repo}{ProductRepo}}\&);}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_product_repo}{ProductRepo}}\& \mbox{\hyperlink{class_product_repo_ae82258a828d69e39859aae29c7902a82}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_product_repo}{ProductRepo}}\&);}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_product_repo_a6e046fb436dc132b83843a775e6fb6eb}{addProducts}}(\mbox{\hyperlink{class_product}{Product}}*);}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_product}{Product}}* \mbox{\hyperlink{class_product_repo_a7b23efbc30899fb908bab601c43b04b5}{removeProduct}}(\textcolor{keyword}{const} std::string\& barcode);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_product_repo_abf69d67c48ffb5f4fc4a836c27941e6c}{updateProduct}}(\textcolor{keyword}{const} std::string\& barcode, \mbox{\hyperlink{class_product}{Product}}*);}
+\DoxyCodeLine{22     \textcolor{keyword}{const} std::vector<Product*>\& \mbox{\hyperlink{class_product_repo_ab984f9668dc32d4292280a0459b56f95}{getAllProducts}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_product}{Product}}* \mbox{\hyperlink{class_product_repo_a622b2bab81903a7f30d3140567dc86c7}{getProductByBarcode}}(\textcolor{keyword}{const} std::string\& barcode);}
+\DoxyCodeLine{24     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{class_product_repo_a265cb68a7bf2c12f547331dc5fada61a}{operator<<}}(std::ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{class_product_repo}{ProductRepo}}\& repo);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJECT1\_PRODUCTREPO\_H}}
+
+\end{DoxyCode}

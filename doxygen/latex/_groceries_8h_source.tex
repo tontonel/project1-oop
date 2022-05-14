@@ -1,0 +1,32 @@
+\hypertarget{_groceries_8h_source}{}\doxysection{Groceries.\+h}
+\label{_groceries_8h_source}\index{D:/OOP\_labs/project1/Groceries/Groceries.h@{D:/OOP\_labs/project1/Groceries/Groceries.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by tionu on 4/24/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../Domain/Product.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef PROJECT1\_GROCERY\_H}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define PROJECT1\_GROCERY\_H}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_groceries}{Groceries}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_product}{Product}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{private}:}
+\DoxyCodeLine{13     std::string expDate;}
+\DoxyCodeLine{14 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{15     std::string \mbox{\hyperlink{class_groceries_a1c049c561c1d130a672392e6f4ccc816}{print}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_groceries_a3ab7f8c16b91da292111d75c5f9ef95b}{read}}(std::istream\&) \textcolor{keyword}{override};}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_groceries}{Groceries}}();}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_groceries}{Groceries}}(\textcolor{keyword}{const} std::string\&, \textcolor{keyword}{const} std::string\&, \textcolor{keyword}{const} std::string\&, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}, \textcolor{keyword}{const} std::string\& \_expDate);}
+\DoxyCodeLine{20     \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{class_groceries_a00a4b9ae18717c8fa8bb723c8f95fc3d}{getExpDate}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_groceries_a59ef75019bda3465ea5e180f2b94cd30}{setExpDate}} (\textcolor{keyword}{const} std::string\&);}
+\DoxyCodeLine{22     \textcolor{keyword}{friend} std::ostream\& operator<<(std::ostream\&, \textcolor{keyword}{const} \mbox{\hyperlink{class_groceries}{Groceries}}\&);}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJECT1\_GROCERY\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,45 @@
+\hypertarget{_u_i_8h_source}{}\doxysection{UI.\+h}
+\label{_u_i_8h_source}\index{D:/OOP\_labs/project1/UI/UI.h@{D:/OOP\_labs/project1/UI/UI.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by tionu on 4/23/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Menu.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../Groceries/Groceries.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../Electronics/Electronics.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../PersonalCare/PersonalCare.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../Domain/Product.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}../Utilty/Uitlity.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}../Repository/ProductRepo.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifndef PROJECT1\_UI\_H}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define PROJECT1\_UI\_H}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_u_i}{UI}} \{}
+\DoxyCodeLine{18 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_u_i_a65506e55f8097cc781bf2777fe1bad1b}{readName}}();}
+\DoxyCodeLine{21     \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_u_i_a6a55309faf44b6e6fdd0308110dff007}{readExpDate}}();}
+\DoxyCodeLine{22     \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_u_i_a0bfbba98341ee011669ce13234876141}{readPrice}}();}
+\DoxyCodeLine{23     \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_u_i_a453f49d7264310aec5dead6a71dc021e}{readPieces}}();}
+\DoxyCodeLine{24     \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_u_i_aa1bbfcb60714d9583caea8f4decff840}{readGuarantee}}();}
+\DoxyCodeLine{25     \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_u_i_abf4ef3300ae966c1290a470bd42525dc}{readCategory}}();}
+\DoxyCodeLine{26     \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_u_i_af14e71825a9976e51bd3121577d3f780}{readBarcode}}();}
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_u_i_a70bc6889a5cabc24493d35b45679ce06}{getMainMenuCommand}}();}
+\DoxyCodeLine{29     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_af0b81e82dd409207019b8ff23941cc72}{printException}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{30     \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_u_i_aae8bcf2dd06dadc10b9cc985d7d50c70}{getCategoryMenuCommand}}();}
+\DoxyCodeLine{31     \textcolor{keyword}{static} \mbox{\hyperlink{class_product}{Product}}* \mbox{\hyperlink{class_u_i_a9a33ea207f6539e4d0070b7dbb4364f5}{getProduct}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} command);}
+\DoxyCodeLine{32     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_ae8448f9d211b4d60d91444343dd80ba4}{printRepo}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_product_repo}{ProductRepo}}\& repo);}
+\DoxyCodeLine{33     \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_u_i_ae15cf7f0d5fa3ff723030463252cbce6}{getBarcode}}();}
+\DoxyCodeLine{34     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_ae92e37a071ae312e78349bb9f7702058}{successfullyRemoved}}(\mbox{\hyperlink{class_product}{Product}}*);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJECT1\_UI\_H}}
+
+\end{DoxyCode}

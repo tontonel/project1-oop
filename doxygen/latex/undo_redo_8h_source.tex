@@ -1,0 +1,62 @@
+\hypertarget{undo_redo_8h_source}{}\doxysection{undo\+Redo.\+h}
+\label{undo_redo_8h_source}\index{D:/OOP\_labs/project1/UndoRedo/undoRedo.h@{D:/OOP\_labs/project1/UndoRedo/undoRedo.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by tionu on 5/10/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROJECT1\_UNDOREDO\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROJECT1\_UNDOREDO\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../Domain/Product.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../Persistency/FileRepo.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_undo_redo}{UndoRedo}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_undo_redo}{UndoRedo}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{14     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} undo(\mbox{\hyperlink{class_file_repo}{FileRepo}}\&) = 0;}
+\DoxyCodeLine{15     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} redo(\mbox{\hyperlink{class_file_repo}{FileRepo}}\&) = 0;}
+\DoxyCodeLine{16 \};}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_undo_redo_add}{UndoRedoAdd}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_undo_redo}{UndoRedo}}\{}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_product}{Product}}* product;}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_undo_redo_add_a5671240af8e420934d227b9317573088}{UndoRedoAdd}}(\mbox{\hyperlink{class_product}{Product}}*);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_undo_redo_add_a0d656cb19f12cfb4798c630c23628ef4}{undo}}(\mbox{\hyperlink{class_file_repo}{FileRepo}}\&) \textcolor{keyword}{override};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_undo_redo_add_a9b8b32682febd4e6e5be7195a7b72dcb}{redo}}(\mbox{\hyperlink{class_file_repo}{FileRepo}}\&) \textcolor{keyword}{override};}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{class }\mbox{\hyperlink{class_undo_redo_remove}{UndoRedoRemove}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_undo_redo}{UndoRedo}} \{}
+\DoxyCodeLine{26 \textcolor{keyword}{private}:}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_product}{Product}}* product;}
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_undo_redo_remove_a83d434ddea0529141bc444bef6949ff5}{UndoRedoRemove}}(\mbox{\hyperlink{class_product}{Product}}*);}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_undo_redo_remove_aa1aaaf13634015aa7690296933061191}{undo}}(\mbox{\hyperlink{class_file_repo}{FileRepo}}\&) \textcolor{keyword}{override};}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_undo_redo_remove_a5a06b855e77b5823c1297949752f4adf}{redo}}(\mbox{\hyperlink{class_file_repo}{FileRepo}}\&) \textcolor{keyword}{override};}
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{class }\mbox{\hyperlink{class_undo_redo_update}{UndoRedoUpdate}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_undo_redo}{UndoRedo}} \{}
+\DoxyCodeLine{35 \textcolor{keyword}{private}:}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_product}{Product}} *oldProduct, *newProduct;}
+\DoxyCodeLine{37 \textcolor{keyword}{public}:}
+\DoxyCodeLine{38     \mbox{\hyperlink{class_undo_redo_update_a735ce8734ee5588ebbfee9a03d152d59}{UndoRedoUpdate}}(\mbox{\hyperlink{class_product}{Product}}*, \mbox{\hyperlink{class_product}{Product}}*);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_undo_redo_update_a2465e3e85bb66d9ddf73d1014d4c8fe6}{undo}}(\mbox{\hyperlink{class_file_repo}{FileRepo}}\&) \textcolor{keyword}{override};}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_undo_redo_update_a14f85d19d451f9fd47b644f1e2bcecd9}{redo}}(\mbox{\hyperlink{class_file_repo}{FileRepo}}\&) \textcolor{keyword}{override};}
+\DoxyCodeLine{41 \};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{class }\mbox{\hyperlink{class_undo_redo_manager}{UndoRedoManager}} \{}
+\DoxyCodeLine{44 \textcolor{keyword}{private}:}
+\DoxyCodeLine{45     std::stack<UndoRedo*> undoStack = \{\};}
+\DoxyCodeLine{46     std::stack<UndoRedo*> redoStack = \{\};}
+\DoxyCodeLine{47     \mbox{\hyperlink{class_file_repo}{FileRepo}}\& repo;}
+\DoxyCodeLine{48 \textcolor{keyword}{public}:}
+\DoxyCodeLine{49     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_undo_redo_manager_a5b380f0ccc372789c299ac16a7f02102}{UndoRedoManager}}(\mbox{\hyperlink{class_file_repo}{FileRepo}}\& \_repo);}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_undo_redo_manager_a24f93dbdc109b919f63165122e9ff0b6}{execute}}(\mbox{\hyperlink{class_undo_redo}{UndoRedo}}*);}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_undo_redo_manager_a03cd41d297e4d8b6a40ea3dfc61aca1a}{undo}}();}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_undo_redo_manager_a61f2bbcf65e340c447d7c949a7706ad6}{redo}}();}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJECT1\_UNDOREDO\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,90 @@
+\hypertarget{class_electronics}{}\doxysection{Electronics Class Reference}
+\label{class_electronics}\index{Electronics@{Electronics}}
+Inheritance diagram for Electronics\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_electronics}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_electronics_a3ea1ab115afa8e6d1b6617993cb2f6d7}\label{class_electronics_a3ea1ab115afa8e6d1b6617993cb2f6d7}} 
+{\bfseries Electronics} (const std\+::string \&, const std\+::string \&, const std\+::string \&, double, unsigned int, unsigned int)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_electronics_a2c328d60f3b51e2ef6fe6e6f565d6c96}{get\+Guarantee}} () const
+\item 
+\mbox{\Hypertarget{class_electronics_aacc95357e3d1a82e56387294e0670fd8}\label{class_electronics_aacc95357e3d1a82e56387294e0670fd8}} 
+void {\bfseries set\+Guarantee} (unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_electronics_ae3df1c28b171b505c5db742115fd3aa6}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Polymorphic print function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_electronics_ad17031c3db341812c8cd3b50307bacbb}{read}} (std\+::istream \&) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_electronics_a2ee17d5629b351ba80dde82f1b86cc96}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{class_electronics}{Electronics}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_electronics_a2c328d60f3b51e2ef6fe6e6f565d6c96}\label{class_electronics_a2c328d60f3b51e2ef6fe6e6f565d6c96}} 
+\index{Electronics@{Electronics}!getGuarantee@{getGuarantee}}
+\index{getGuarantee@{getGuarantee}!Electronics@{Electronics}}
+\doxysubsubsection{\texorpdfstring{getGuarantee()}{getGuarantee()}}
+{\footnotesize\ttfamily unsigned int Electronics\+::get\+Guarantee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+guarantee getter \begin{DoxyReturn}{Returns}
+a natural number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_electronics_ae3df1c28b171b505c5db742115fd3aa6}\label{class_electronics_ae3df1c28b171b505c5db742115fd3aa6}} 
+\index{Electronics@{Electronics}!print@{print}}
+\index{print@{print}!Electronics@{Electronics}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily std\+::string Electronics\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Polymorphic print function. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_product_a870f482ba00fce3af67fd947a3cb6554}{Product}}.
+
+\mbox{\Hypertarget{class_electronics_ad17031c3db341812c8cd3b50307bacbb}\label{class_electronics_ad17031c3db341812c8cd3b50307bacbb}} 
+\index{Electronics@{Electronics}!read@{read}}
+\index{read@{read}!Electronics@{Electronics}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void Electronics\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Polymorphic read from \mbox{\hyperlink{class_product}{Product}} 
+\begin{DoxyParams}{Parameters}
+{\em in} & input stream \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_product_a9b88d8b605f20bec81ec3459599ee1e1}{Product}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_electronics_a2ee17d5629b351ba80dde82f1b86cc96}\label{class_electronics_a2ee17d5629b351ba80dde82f1b86cc96}} 
+\index{Electronics@{Electronics}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Electronics@{Electronics}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_electronics}{Electronics}} \&}]{electronic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+output stream for \mbox{\hyperlink{class_electronics}{Electronics}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_electronics_ae3df1c28b171b505c5db742115fd3aa6}{print()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+OOP\+\_\+labs/project1/\+Electronics/Electronics.\+h\item 
+D\+:/\+OOP\+\_\+labs/project1/\+Electronics/Electronics.\+cpp\end{DoxyCompactItemize}

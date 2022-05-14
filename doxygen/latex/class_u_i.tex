@@ -1,0 +1,164 @@
+\hypertarget{class_u_i}{}\doxysection{UI Class Reference}
+\label{class_u_i}\index{UI@{UI}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \mbox{\hyperlink{class_u_i_a70bc6889a5cabc24493d35b45679ce06}{get\+Main\+Menu\+Command}} ()
+\item 
+\mbox{\Hypertarget{class_u_i_af0b81e82dd409207019b8ff23941cc72}\label{class_u_i_af0b81e82dd409207019b8ff23941cc72}} 
+static void {\bfseries print\+Exception} (const char $\ast$)
+\begin{DoxyCompactList}\small\item\em print exceptions \end{DoxyCompactList}\item 
+static unsigned int \mbox{\hyperlink{class_u_i_aae8bcf2dd06dadc10b9cc985d7d50c70}{get\+Category\+Menu\+Command}} ()
+\item 
+static \mbox{\hyperlink{class_product}{Product}} $\ast$ \mbox{\hyperlink{class_u_i_a9a33ea207f6539e4d0070b7dbb4364f5}{get\+Product}} (unsigned int command)
+\item 
+static void \mbox{\hyperlink{class_u_i_ae8448f9d211b4d60d91444343dd80ba4}{print\+Repo}} (const \mbox{\hyperlink{class_product_repo}{Product\+Repo}} \&repo)
+\item 
+static std\+::string \mbox{\hyperlink{class_u_i_ae15cf7f0d5fa3ff723030463252cbce6}{get\+Barcode}} ()
+\item 
+static void \mbox{\hyperlink{class_u_i_ae92e37a071ae312e78349bb9f7702058}{successfully\+Removed}} (\mbox{\hyperlink{class_product}{Product}} $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_u_i_a65506e55f8097cc781bf2777fe1bad1b}{read\+Name}} ()
+\item 
+static std\+::string \mbox{\hyperlink{class_u_i_a6a55309faf44b6e6fdd0308110dff007}{read\+Exp\+Date}} ()
+\item 
+static double \mbox{\hyperlink{class_u_i_a0bfbba98341ee011669ce13234876141}{read\+Price}} ()
+\item 
+static unsigned int \mbox{\hyperlink{class_u_i_a453f49d7264310aec5dead6a71dc021e}{read\+Pieces}} ()
+\item 
+static unsigned int \mbox{\hyperlink{class_u_i_aa1bbfcb60714d9583caea8f4decff840}{read\+Guarantee}} ()
+\item 
+static std\+::string \mbox{\hyperlink{class_u_i_abf4ef3300ae966c1290a470bd42525dc}{read\+Category}} ()
+\item 
+static std\+::string \mbox{\hyperlink{class_u_i_af14e71825a9976e51bd3121577d3f780}{read\+Barcode}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_i_ae15cf7f0d5fa3ff723030463252cbce6}\label{class_u_i_ae15cf7f0d5fa3ff723030463252cbce6}} 
+\index{UI@{UI}!getBarcode@{getBarcode}}
+\index{getBarcode@{getBarcode}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{getBarcode()}{getBarcode()}}
+{\footnotesize\ttfamily std\+::string UI\+::get\+Barcode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+gets a barcode for removing an \mbox{\hyperlink{class_product}{Product}} from repository with validation \begin{DoxyReturn}{Returns}
+a string with barcode 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_aae8bcf2dd06dadc10b9cc985d7d50c70}\label{class_u_i_aae8bcf2dd06dadc10b9cc985d7d50c70}} 
+\index{UI@{UI}!getCategoryMenuCommand@{getCategoryMenuCommand}}
+\index{getCategoryMenuCommand@{getCategoryMenuCommand}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{getCategoryMenuCommand()}{getCategoryMenuCommand()}}
+{\footnotesize\ttfamily unsigned int UI\+::get\+Category\+Menu\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+prints category menu and get a command from client \begin{DoxyReturn}{Returns}
+an int command form client 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_a70bc6889a5cabc24493d35b45679ce06}\label{class_u_i_a70bc6889a5cabc24493d35b45679ce06}} 
+\index{UI@{UI}!getMainMenuCommand@{getMainMenuCommand}}
+\index{getMainMenuCommand@{getMainMenuCommand}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{getMainMenuCommand()}{getMainMenuCommand()}}
+{\footnotesize\ttfamily unsigned int UI\+::get\+Main\+Menu\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+prints main menu and get a command form client \begin{DoxyReturn}{Returns}
+an int command from client 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_a9a33ea207f6539e4d0070b7dbb4364f5}\label{class_u_i_a9a33ea207f6539e4d0070b7dbb4364f5}} 
+\index{UI@{UI}!getProduct@{getProduct}}
+\index{getProduct@{getProduct}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{getProduct()}{getProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_product}{Product}} $\ast$ UI\+::get\+Product (\begin{DoxyParamCaption}\item[{unsigned int}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+reading the polymorphic \mbox{\hyperlink{class_product}{Product}} from client \begin{DoxyReturn}{Returns}
+a \mbox{\hyperlink{class_product}{Product}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_ae8448f9d211b4d60d91444343dd80ba4}\label{class_u_i_ae8448f9d211b4d60d91444343dd80ba4}} 
+\index{UI@{UI}!printRepo@{printRepo}}
+\index{printRepo@{printRepo}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{printRepo()}{printRepo()}}
+{\footnotesize\ttfamily void UI\+::print\+Repo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_product_repo}{Product\+Repo}} \&}]{repo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+prints the repository 
+\begin{DoxyParams}{Parameters}
+{\em repo} & the given \mbox{\hyperlink{class_product_repo}{Product\+Repo}} object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_af14e71825a9976e51bd3121577d3f780}\label{class_u_i_af14e71825a9976e51bd3121577d3f780}} 
+\index{UI@{UI}!readBarcode@{readBarcode}}
+\index{readBarcode@{readBarcode}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{readBarcode()}{readBarcode()}}
+{\footnotesize\ttfamily std\+::string UI\+::read\+Barcode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+read with validation barcode \begin{DoxyReturn}{Returns}
+a string with barcode 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_abf4ef3300ae966c1290a470bd42525dc}\label{class_u_i_abf4ef3300ae966c1290a470bd42525dc}} 
+\index{UI@{UI}!readCategory@{readCategory}}
+\index{readCategory@{readCategory}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{readCategory()}{readCategory()}}
+{\footnotesize\ttfamily std\+::string UI\+::read\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+reads category \begin{DoxyReturn}{Returns}
+a string with category 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_a6a55309faf44b6e6fdd0308110dff007}\label{class_u_i_a6a55309faf44b6e6fdd0308110dff007}} 
+\index{UI@{UI}!readExpDate@{readExpDate}}
+\index{readExpDate@{readExpDate}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{readExpDate()}{readExpDate()}}
+{\footnotesize\ttfamily std\+::string UI\+::read\+Exp\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+reads expiration date with validation \begin{DoxyReturn}{Returns}
+a string with expiration date 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_aa1bbfcb60714d9583caea8f4decff840}\label{class_u_i_aa1bbfcb60714d9583caea8f4decff840}} 
+\index{UI@{UI}!readGuarantee@{readGuarantee}}
+\index{readGuarantee@{readGuarantee}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{readGuarantee()}{readGuarantee()}}
+{\footnotesize\ttfamily unsigned int UI\+::read\+Guarantee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+reads guarantee with validation \begin{DoxyReturn}{Returns}
+an int with guarantee 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_a65506e55f8097cc781bf2777fe1bad1b}\label{class_u_i_a65506e55f8097cc781bf2777fe1bad1b}} 
+\index{UI@{UI}!readName@{readName}}
+\index{readName@{readName}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{readName()}{readName()}}
+{\footnotesize\ttfamily std\+::string UI\+::read\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+reads a name with validation \begin{DoxyReturn}{Returns}
+a string with name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_a453f49d7264310aec5dead6a71dc021e}\label{class_u_i_a453f49d7264310aec5dead6a71dc021e}} 
+\index{UI@{UI}!readPieces@{readPieces}}
+\index{readPieces@{readPieces}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{readPieces()}{readPieces()}}
+{\footnotesize\ttfamily unsigned int UI\+::read\+Pieces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+reads pieces with validation @retun an int with pieces \mbox{\Hypertarget{class_u_i_a0bfbba98341ee011669ce13234876141}\label{class_u_i_a0bfbba98341ee011669ce13234876141}} 
+\index{UI@{UI}!readPrice@{readPrice}}
+\index{readPrice@{readPrice}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{readPrice()}{readPrice()}}
+{\footnotesize\ttfamily double UI\+::read\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+reads price with validation \begin{DoxyReturn}{Returns}
+a double with price 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_ae92e37a071ae312e78349bb9f7702058}\label{class_u_i_ae92e37a071ae312e78349bb9f7702058}} 
+\index{UI@{UI}!successfullyRemoved@{successfullyRemoved}}
+\index{successfullyRemoved@{successfullyRemoved}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{successfullyRemoved()}{successfullyRemoved()}}
+{\footnotesize\ttfamily void UI\+::successfully\+Removed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product}{Product}} $\ast$}]{product }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+prints message for successfully removed \mbox{\hyperlink{class_product}{Product}} object from repository 
+\begin{DoxyParams}{Parameters}
+{\em product} & the product removed from repository \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+OOP\+\_\+labs/project1/\+UI/UI.\+h\item 
+D\+:/\+OOP\+\_\+labs/project1/\+UI/UI.\+cpp\end{DoxyCompactItemize}

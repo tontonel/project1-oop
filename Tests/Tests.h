@@ -7,6 +7,10 @@
 #include "../Domain/Product.h"
 #include "../Repository/ProductRepo.h"
 #include "../UndoRedo/undoRedo.h"
+#include "../Electronics/Electronics.h"
+#include "../Groceries/Groceries.h"
+#include "../PersonalCare/PersonalCare.h"
+#include "../Persistency/FileRepo.h"
 
 
 

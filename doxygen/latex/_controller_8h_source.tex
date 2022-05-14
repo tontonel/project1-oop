@@ -1,0 +1,33 @@
+\hypertarget{_controller_8h_source}{}\doxysection{Controller.\+h}
+\label{_controller_8h_source}\index{D:/OOP\_labs/project1/Controller/Controller.h@{D:/OOP\_labs/project1/Controller/Controller.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by tionu on 4/23/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../Persistency/FileRepo.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../Domain/Product.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../UndoRedo/undoRedo.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef PROJECT1\_CONTROLLER\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define PROJECT1\_CONTROLLER\_H}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_controller}{Controller}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{private}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_file_repo}{FileRepo}} repo;}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_undo_redo_manager}{UndoRedoManager}} undoRedo;}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_controller}{Controller}}();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_abd379a80a180c5259f6379c9855b955e}{addProduct}}(\mbox{\hyperlink{class_product}{Product}}*);}
+\DoxyCodeLine{19     \textcolor{keyword}{const} \mbox{\hyperlink{class_product_repo}{ProductRepo}}\& \mbox{\hyperlink{class_controller_a2646908026fc5a253e9856b3638c518d}{seeAlLProducts}}();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_aff12947e7053c7a74531387ccd3198a4}{updateProduct}}(\textcolor{keyword}{const} std::string\&, \mbox{\hyperlink{class_product}{Product}}*);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a739cd8664ed6a4edbc6f99dd030a716f}{removeProduct}}(\textcolor{keyword}{const} std::string\&);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a52b8812ceca0b4368dea2e2b4399d860}{undo}}();}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_aeb55fe16b48f14b00c179e95a0372a17}{redo}}();}
+\DoxyCodeLine{24 \};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJECT1\_CONTROLLER\_H}}
+
+\end{DoxyCode}

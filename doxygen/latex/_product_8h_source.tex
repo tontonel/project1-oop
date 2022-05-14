@@ -1,0 +1,44 @@
+\hypertarget{_product_8h_source}{}\doxysection{Product.\+h}
+\label{_product_8h_source}\index{D:/OOP\_labs/project1/Domain/Product.h@{D:/OOP\_labs/project1/Domain/Product.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by tionu on 4/23/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROJECT1\_PRODUCT\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROJECT1\_PRODUCT\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_product}{Product}} \{}
+\DoxyCodeLine{10 \textcolor{keyword}{private}:}
+\DoxyCodeLine{11     std::string barcode, name, category;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{double} price;}
+\DoxyCodeLine{13     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} pieces;}
+\DoxyCodeLine{14 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{15     \textcolor{keyword}{virtual} std::string \mbox{\hyperlink{class_product_a870f482ba00fce3af67fd947a3cb6554}{print}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{16     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_product_a9b88d8b605f20bec81ec3459599ee1e1}{read}}(std::istream\&);}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_product}{Product}}();}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_product}{Product}}(std::string barcode, std::string name, std::string category, \textcolor{keywordtype}{double} price, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} pieces);}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_product}{Product}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_product}{Product}}\&);}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_product}{Product}}\& \mbox{\hyperlink{class_product_a2670eb3d4007da0002fca2edff92faa5}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_product}{Product}}\& other);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_product_a1c15daf73c572065f095e3ac0f17e9cf}{setName}}(\textcolor{keyword}{const} std::string\& name);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_product_a81bbf7cb67ac3568507f8e43586e9c7d}{setCategory}}(\textcolor{keyword}{const} std::string\& category);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_product_a90e41a2782d231da9b5f09f0c238e92f}{setPrice}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}\& price);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_product_aa5141427994289f8fdf2aa05e104b900}{setPieces}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& pieces);}
+\DoxyCodeLine{26     std::string \mbox{\hyperlink{class_product_a9cbd896ca6b2d95088be8ad8c3b11e3b}{getName}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{27     std::string \mbox{\hyperlink{class_product_af06ea84501e4f4fe286f51c4063296ac}{getCategory}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{28     std::string \mbox{\hyperlink{class_product_abf6c8498fc06696f7e0a5338fcd24649}{getBarcode}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{29     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_product_a3be25f647260d61df6063ef706261c7f}{getPrice}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{30     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_product_a37dcffd749732bed8e976009c9d3ad1d}{getPieces}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{31     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_product_a478acc1b0bf412f78287569f642ce3b6}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_product}{Product}}\& product1) \textcolor{keyword}{const};}
+\DoxyCodeLine{32     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{class_product_a7da2d757256c0b8a62e9b9a9ae9fb8ff}{operator<<}}(std::ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{class_product}{Product}}\&);}
+\DoxyCodeLine{33     \textcolor{keyword}{friend} std::istream\& \mbox{\hyperlink{class_product_ae3be2653cc4261b41928ba6ae280f95c}{operator>>}}(std::istream\&, \mbox{\hyperlink{class_product}{Product}}\&);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJECT1\_PRODUCT\_H}}
+
+\end{DoxyCode}
